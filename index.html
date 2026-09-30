@@ -481,9 +481,141 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   .board-wrap{grid-template-columns:1fr;}
   h1{font-size:26px; letter-spacing:3px;}
 }
+
+
+/* =========================================================
+   求職作品封面｜生物象棋
+   ========================================================= */
+html{scroll-behavior:smooth;}
+#site-main{scroll-margin-top:18px;}
+.portfolio-cover{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:48px 24px;overflow:hidden;background:radial-gradient(circle at 18% 18%,rgba(176,141,62,.13),transparent 32%),radial-gradient(circle at 82% 72%,rgba(168,50,38,.10),transparent 35%),var(--bg);border-bottom:3px double var(--gold);}
+.portfolio-cover::before,.portfolio-cover::after{content:"";position:absolute;border:1px solid var(--gold);opacity:.14;pointer-events:none;}
+.portfolio-cover::before{width:430px;height:430px;left:-150px;top:-150px;transform:rotate(18deg);}
+.portfolio-cover::after{width:360px;height:360px;right:-120px;bottom:-130px;transform:rotate(-14deg);}
+.portfolio-cover__inner{position:relative;z-index:1;width:min(1120px,100%);}
+.portfolio-cover__eyebrow{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:14px;font-family:var(--kai);color:var(--ink-soft);font-size:13px;letter-spacing:3px;}
+.portfolio-cover__eyebrow::before,.portfolio-cover__eyebrow::after{content:"";width:72px;height:1px;background:var(--gold);opacity:.7;}
+.portfolio-cover__hero{text-align:center;max-width:900px;margin:0 auto;}
+.portfolio-cover__pieces{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:14px;}
+.portfolio-cover__piece{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;font-family:var(--kai);font-size:25px;font-weight:700;background:var(--paper);box-shadow:inset 0 0 0 3px var(--paper),inset 0 0 0 5px currentColor,0 3px 12px rgba(0,0,0,.12);}
+.portfolio-cover__piece--red{color:var(--red);border:2px solid var(--red);}
+.portfolio-cover__piece--black{color:var(--black-side);border:2px solid var(--black-side);}
+.portfolio-cover__title{margin:0;font-family:var(--kai);font-size:clamp(42px,8vw,78px);line-height:1.1;letter-spacing:.16em;color:var(--ink);}
+.portfolio-cover__title-accent{color:var(--red);}
+.portfolio-cover__position{margin:16px 0 0;font-family:var(--kai);font-size:clamp(17px,2vw,22px);letter-spacing:3px;color:var(--red-dark);}
+.portfolio-cover__tagline{margin:10px 0 0;font-family:var(--kai);font-size:14px;letter-spacing:4px;color:var(--ink-soft);}
+.portfolio-cover__intro{max-width:760px;margin:24px auto 0;font-size:16px;line-height:1.9;color:var(--ink);}
+.portfolio-cover__tags{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 0;}
+.portfolio-cover__tag{display:inline-flex;align-items:center;min-height:30px;padding:4px 12px;border:1px solid var(--gold);border-radius:999px;background:var(--tag-bg);color:var(--tag-ink);font-family:var(--kai);font-size:12.5px;letter-spacing:1px;}
+.portfolio-cover__grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:960px;margin:34px auto 0;}
+.portfolio-cover__card{position:relative;padding:22px 24px;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.07);}
+.portfolio-cover__card--human{border-top-color:var(--red);}
+.portfolio-cover__card h2{margin:0 0 12px;font-family:var(--kai);font-size:19px;letter-spacing:3px;color:var(--red-dark);}
+.portfolio-cover__card ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;}
+.portfolio-cover__card li{padding:4px 9px;background:var(--paper2);border:1px solid var(--line);border-radius:4px;font-size:13px;color:var(--ink);}
+.portfolio-cover__workflow{max-width:960px;margin:18px auto 0;padding:20px 24px;background:var(--paper);border:1px solid var(--line);border-radius:8px;}
+.portfolio-cover__workflow-title{margin:0 0 14px;font-family:var(--kai);font-size:18px;letter-spacing:3px;color:var(--red-dark);}
+.portfolio-cover__steps{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;}
+.portfolio-cover__step{padding:5px 11px;background:var(--paper2);border:1px solid var(--line);border-radius:4px;font-size:13px;}
+.portfolio-cover__arrow{color:var(--gold);font-family:var(--kai);font-size:17px;}
+.portfolio-cover__browse{max-width:960px;margin:18px auto 0;padding:20px 24px;border:1px dashed var(--gold);border-radius:8px;background:var(--mid-bg);}
+.portfolio-cover__browse h2{margin:0 0 12px;font-family:var(--kai);font-size:18px;letter-spacing:3px;color:var(--tag-ink);}
+.portfolio-cover__browse ol{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0;padding-left:22px;font-size:14px;}
+.portfolio-cover__actions{display:flex;justify-content:center;margin-top:28px;}
+.portfolio-cover__enter{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:240px;padding:13px 24px;border:1px solid var(--red-dark);border-radius:5px;background:var(--red);color:#fdf6e6;font-family:var(--kai);font-size:17px;letter-spacing:3px;text-decoration:none;box-shadow:0 5px 14px rgba(0,0,0,.12);transition:transform .15s ease,background .15s ease,box-shadow .15s ease;}
+.portfolio-cover__enter:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.16);}
+.portfolio-cover__enter:focus-visible{outline:2px solid var(--red);outline-offset:4px;}
+.portfolio-cover__status{margin:14px 0 0;text-align:center;font-size:12.5px;color:var(--ink-soft);}
+@media (max-width:760px){.portfolio-cover{min-height:auto;padding:38px 16px 44px}.portfolio-cover__grid{grid-template-columns:1fr}.portfolio-cover__title{letter-spacing:.08em}.portfolio-cover__intro{font-size:15px}.portfolio-cover__browse ol{display:block}.portfolio-cover__browse li{margin:5px 0}.portfolio-cover__eyebrow::before,.portfolio-cover__eyebrow::after{width:34px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.portfolio-cover__enter{transition:none}}
+
 </style>
 </head>
 <body>
+
+<section class="portfolio-cover" aria-labelledby="portfolioTitle">
+  <div class="portfolio-cover__inner">
+    <div class="portfolio-cover__eyebrow">PERSONAL GAME DESIGN PROJECT</div>
+    <div class="portfolio-cover__hero">
+      <div class="portfolio-cover__pieces" aria-hidden="true">
+        <span class="portfolio-cover__piece portfolio-cover__piece--red">帥</span>
+        <span class="portfolio-cover__piece portfolio-cover__piece--black">將</span>
+      </div>
+      <h1 class="portfolio-cover__title" id="portfolioTitle">生物象棋<span class="portfolio-cover__title-accent">．</span></h1>
+      <p class="portfolio-cover__position">原創角色驅動策略遊戲企劃原型</p>
+      <p class="portfolio-cover__tagline">觸碰即成棋，勝者得願望</p>
+      <p class="portfolio-cover__intro">以中國象棋職階概念延伸出的角色策略對戰企劃。每一枚棋子都保留原有的記憶、性格、背景與立場，玩家除了考慮技能與戰術，也必須處理角色溝通、服從關係、情報限制，以及不同角色之間既有的人際關係。</p>
+      <div class="portfolio-cover__tags" aria-label="作品標籤">
+        <span class="portfolio-cover__tag">策略對戰</span>
+        <span class="portfolio-cover__tag">角色驅動</span>
+        <span class="portfolio-cover__tag">遊戲規則設計</span>
+        <span class="portfolio-cover__tag">AI 輔助製作</span>
+        <span class="portfolio-cover__tag">企劃原型</span>
+        <span class="portfolio-cover__tag">持續開發中</span>
+      </div>
+    </div>
+
+    <div class="portfolio-cover__grid">
+      <article class="portfolio-cover__card portfolio-cover__card--human">
+        <h2>本人負責</h2>
+        <ul>
+          <li>核心遊戲概念</li>
+          <li>角色背景與性格</li>
+          <li>棋盤與職階規則</li>
+          <li>角色能力遊戲化</li>
+          <li>角色驅動式世界觀</li>
+          <li>劇情與角色互動方向</li>
+          <li>設定取捨與最終判斷</li>
+        </ul>
+      </article>
+
+      <article class="portfolio-cover__card">
+        <h2>AI 協助</h2>
+        <ul>
+          <li>語言表達整理</li>
+          <li>規則文字結構化</li>
+          <li>邏輯衝突檢查</li>
+          <li>角色對話模擬</li>
+          <li>大量資料整理</li>
+          <li>前後設定一致性確認</li>
+          <li>角色偏移後重新校正</li>
+        </ul>
+      </article>
+    </div>
+
+    <section class="portfolio-cover__workflow">
+      <h2 class="portfolio-cover__workflow-title">內容製作方式</h2>
+      <div class="portfolio-cover__steps">
+        <span class="portfolio-cover__step">自行構想角色背景</span>
+        <span class="portfolio-cover__arrow">→</span>
+        <span class="portfolio-cover__step">分析角色行為與特質</span>
+        <span class="portfolio-cover__arrow">→</span>
+        <span class="portfolio-cover__step">轉換為棋盤能力</span>
+        <span class="portfolio-cover__arrow">→</span>
+        <span class="portfolio-cover__step">AI 協助模擬與整理</span>
+        <span class="portfolio-cover__arrow">→</span>
+        <span class="portfolio-cover__step">人工檢查與校正</span>
+      </div>
+    </section>
+
+    <section class="portfolio-cover__browse">
+      <h2>第一次瀏覽建議</h2>
+      <ol>
+        <li>角色卡庫——查看角色如何由背景轉換成遊戲能力</li>
+        <li>規則書——了解核心對弈與職階機制</li>
+        <li>世界觀——查看角色背景如何逐步建立共通設定</li>
+        <li>戰報——查看規則、角色與資訊限制實際運作</li>
+        <li>判定工具／對局輔助——查看規則資料化成果</li>
+      </ol>
+    </section>
+
+    <div class="portfolio-cover__actions">
+      <a class="portfolio-cover__enter" href="#site-main">進入完整企劃網站 ↓</a>
+    </div>
+    <p class="portfolio-cover__status">Project Status：企劃原型／持續開發中</p>
+  </div>
+</section>
+
 <header class="site-header">
   <div class="title-block">
     <span class="piece-badge red">帥</span>
@@ -527,7 +659,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
     <button data-tab="find">交叉搜尋</button>
   </nav>
 </header>
-<main>
+<main id="site-main">
 
 <section id="tab-home" class="tab-panel active">
   <div id="homeBox"></div>
@@ -4238,6 +4370,11 @@ function srcFidelityBanner(){
   b.style.cssText = 'position:sticky;top:0;z-index:9999;padding:10px 14px;font-size:13px;line-height:1.6;' +
     (bad ? 'background:#7f1d1d;color:#fff;border-bottom:3px solid #dc2626'
          : 'background:var(--paper,#f5f2ea);color:var(--fg,#333);border-bottom:1px solid var(--gold,#b8963f)');
+  // 公開作品集預設隱藏開發稽核提示；網址加上 ?debug=1 時才顯示。
+  // 例：https://t7991321.github.io/bio-chess/?debug=1
+  if (new URLSearchParams(window.location.search).get('debug') !== '1') {
+    b.style.display = 'none';
+  }
   // 全列不截斷：截斷會讓「修一輪→再跑一輪→猜剩下是誰」反覆空轉。
   // 超過 12 項時自動加捲軸，畫面不會被洗掉。
   b.innerHTML = (bad ? '<b>⚠ 正典稽核失敗——' + parts.join('｜') + '。先修再用</b>' +
